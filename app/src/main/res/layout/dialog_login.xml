@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/csOTPMain"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/btnClose"
+        app:layout_constraintTop_toTopOf="@id/csMain"
+        app:layout_constraintEnd_toEndOf="@id/csMain"
+        android:padding="10dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csMain"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="130dp"
+        android:background="@drawable/login2"
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@id/etPassword"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:hint="Tên đăng nhập"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            android:imeOptions="flagNoExtractUi|actionDone"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:textSize="10sp"
+            android:textColorHint="@android:color/darker_gray"
+            android:background="@drawable/bg_edt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"/>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/llCheckBox"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:hint="Mật khẩu"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            android:imeOptions="flagNoExtractUi|actionDone"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:textSize="10sp"
+            android:textColorHint="@android:color/darker_gray"
+            android:background="@drawable/bg_edt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"/>
+
+        <LinearLayout
+            android:id="@+id/llCheckBox"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:buttonTint="#fdffd7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Tự động đăng nhập"
+                android:textColor="#fdffd7"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/btn_login"
+            android:layout_marginStart="10dp"
+            android:layout_width="115dp"
+            android:layout_height="35dp"/>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:indeterminateTint="#fdffd7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="30dp"
+            android:visibility="gone"
+            android:layout_height="30dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
